@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Collatz-Folge</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+function fcollatz(n){
+    var vAusgabeHtml ;
+    var vAnzahlBerechnungen ;
+
+    vAnzahlBerechnungen = document.getElementById("idAnzahlBerechnungen").value;
+
+    vAusgabeHtml = " ";
+    var vZaehler;
+
+    let count = 0;
+    while (n!==1){
+        if (n % 2 ===0){
+        n = n / 2;
+    }else{
+        n = 3 * n + 1;
+    }
+    count++;
+}
+return count;
+}
+document.getElementById("idAusgabeHtml").innerHTML = vAusgabeHtml;
+
+</script>                       
+</head>
+
+<body>
+    <h1>Collatz-Folge / 3n+1 Problem</h1>
+    Eingabe: <input id="idInput" type="text" value="28"><br /><br />
+    <button onClick="clicked();">Collatz!</button><br /><br />
+    <div id="idAusgabe">Anzahl der Berechungen:</div>
+</body>
+</html>
